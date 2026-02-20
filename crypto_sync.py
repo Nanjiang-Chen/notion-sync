@@ -4,7 +4,8 @@ import requests
 from datetime import datetime, timezone
 
 NOTION_TOKEN = os.environ["NOTION_TOKEN"]
-NOTION_DATABASE_ID = os.environ["NOTION_DATABASE_ID"]
+CRYPTO_DB_ID = os.environ["NOTION_CRYPTO_DB_ID"]
+ETF_DB_ID = os.environ["NOTION_ETF_DB_ID"]
 
 VS_CURRENCY = "aud"
 COINS = {
