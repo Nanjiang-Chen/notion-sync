@@ -1,8 +1,8 @@
-name: Sync crypto prices to Notion
+name: Sync prices to Notion
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 * * * *"   # 每小时一次（UTC）
   workflow_dispatch:
 
 jobs:
@@ -19,7 +19,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run sync
-        run: python crypto_etf_sync.py
+        run: python sync_prices_to_notion.py
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          NOTION_CRYPTO_DB_ID: ${{ secrets.NOTION_CRYPTO_DB_ID }}
+          NOTION_ETF_DB_ID: ${{ secrets.NOTION_ETF_DB_ID }}
