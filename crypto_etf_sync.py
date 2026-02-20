@@ -27,7 +27,7 @@ CRYPTO = {
 # Notion Name (Title) -> Yahoo ticker
 ETFS = {
     "IVV": "IVV.AX",
-    "AGS": "AGS.AX",
+    "VGS": "VGS.AX",
 }
 
 # Column names in both databases
