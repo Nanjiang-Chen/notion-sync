@@ -19,7 +19,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run sync
-        run: python sync_prices_to_notion.py
+        run: python crypto_etf_sync.py
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_CRYPTO_DB_ID: ${{ secrets.NOTION_CRYPTO_DB_ID }}
